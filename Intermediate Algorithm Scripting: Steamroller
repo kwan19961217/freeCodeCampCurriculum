@@ -10,9 +10,7 @@ function steamrollArray(arr) {
       };
     }
   };
-  for (let i = 0; i < arr.length; i++) {
-    checkArr(arr[i]);
-  }
+  checkArr(arr);
   console.log(flattedArr);
   return flattedArr;
 }
