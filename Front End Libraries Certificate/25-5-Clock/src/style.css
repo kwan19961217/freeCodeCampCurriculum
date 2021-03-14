@@ -1,0 +1,70 @@
+body {
+  background-color: #555555;
+}
+#clockbody {
+  text-align: center;
+  color: white;
+  display: grid;
+  grid-template-areas:
+    ". title title title ."
+    ". bl . sl . "
+    ". timer timer timer ."
+}
+
+#title {
+  grid-area: title;
+}
+
+#break-label {
+  grid-area: bl;
+}
+
+#session-label {
+  grid-area: sl;
+}
+
+#timerbody {
+  height: 300px;
+  grid-area: timer;
+  display: grid;
+  grid-template-areas:
+    "label"
+    "time"
+    "button";
+  border-style: solid;
+  border-radius: 20px;
+}
+
+#timer-label {
+  grid-area: label;
+}
+
+#time-left {
+  grid-area: time;
+}
+
+#start_stop, #reset {
+  border-style: solid;
+  border-radius: 10px;
+  height: 30px;
+  width: 100px;
+  padding: 10px;
+}
+
+.lengthBox {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#break-increment, #break-decrement, #session-increment, #session-decrement {
+  color: white;
+  border-style: none;
+  background-color: #555555;
+  font-size: 20px;
+}
+
+.controlButton {
+  grid-area: button;
+  display: flex;
+  justify-content: space-evenly;
+}

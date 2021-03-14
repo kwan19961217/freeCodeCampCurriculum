@@ -1,0 +1,52 @@
+#main {
+  display: flex;
+}
+.containerA {
+  padding-top: 5%;
+  width: 100%;
+  text-align: center;
+  height: auto
+}
+
+#quote-box{
+  padding: 35px;
+  margin: auto;
+  width: 50%;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.quote-text {
+  font-size: 20px;
+}
+.author-text {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: right;
+  color: {this.state.color};
+  font-size: 20px;
+}
+
+.row-button {
+  display: flex;
+  justify-content: space-around;
+}
+
+#tweet-quote {
+  padding: 10px;
+  color: white;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+}
+#new-quote {
+  border-style: solid;
+  color: white;
+  border-radius: 10px;
+}
+
+#header, #footer {
+  color: white;
+  margin: 20px;
+}
+

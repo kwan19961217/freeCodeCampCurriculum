@@ -1,0 +1,80 @@
+body{
+  background-color: #333333;
+}
+
+h1, footer{
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#drum-machine{
+  border-radius: 20px;
+  padding: 20px;
+  width: 400px;
+  margin: auto;
+  background-color: #CCCCCC;
+}
+.drum-pad {
+  text-align: center;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 50px;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: space-evenly;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+    "pad pad pad"
+    "pad pad pad"
+    "pad pad pad"
+    "display display display"
+}
+
+.display {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 100px;
+  grid-area: display;
+  text-align: center;
+}
+
+#hihatclosed {
+  border-color: red;
+}
+
+#tom {
+  border-color: orange;
+}
+
+#crash {
+  border-color: yellow;
+}
+
+#hihatopened {
+  border-color: green;
+}
+
+#snare {
+  border-color: blue;
+}
+
+#ride {
+  border-color: cyan;
+}
+
+#hihathit {
+  border-color: purple;
+}
+
+#bass {
+  border-color: brown;
+}
+
+#floortom {
+  border-color: navy;
+}

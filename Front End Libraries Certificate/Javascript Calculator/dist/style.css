@@ -1,0 +1,83 @@
+#calculator {
+  height: auto;
+  margin: auto;
+  width: 50%;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #AAAAAA;
+}
+
+#calBox {
+  height: auto;
+  color: white;
+  margin: 20px;
+  display: grid;
+  grid-template-areas: 
+    "display display display display display"
+    "display display display display display"
+    "number number number AC AC"
+    "number number number add subtract"
+    "number number number multiply divide"
+    "number number number dot equal";
+   grid-gap: 5px;
+    
+}
+.displayBox {
+  padding: 10px;
+  display: grid;
+  grid-template-areas:
+  "history"
+  "dis";
+  height: 50px;
+  background-color: #444444;
+  grid-area: display;
+  text-align: right;
+}
+.decimalButton {grid-area: dot;}
+#addButton {grid-area: add;}
+#subtractButton {grid-area: subtract;}
+#multiplyButton {grid-area: multiply;}
+#divideButton {grid-area: divide;}
+.clearButton {grid-area: AC;}
+
+#clear {
+  color: white;
+  background-color: red;
+}
+
+#equalButton {grid-area: equal;}
+.numberButton {
+  width: auto;
+  grid-area: number;
+  display: grid;
+  grid-template-areas:
+    "seven eight nine"
+    "four five six"
+    "one two three"
+    "zero zero zero"
+}
+
+input {
+  width: 100%;
+  border-style: solid;
+  border-radius: 5px;
+  height: 50px;
+}
+
+#equals {
+  background-color: orange;
+  color: white;
+}
+
+#one {grid-area: one;}
+#two {grid-area: two;}
+#three {grid-area: three;}
+#four {grid-area: four;}
+#five {grid-area: five;}
+#six {grid-area: six;}
+#seven {grid-area: seven;}
+#eight {grid-area: eight;}
+#nine {grid-area: nine;}
+#zero {grid-area: zero;}
+#display {grid-area: dis;}
+#history {grid-area: history;}
