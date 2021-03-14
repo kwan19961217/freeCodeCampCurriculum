@@ -1,0 +1,103 @@
+const req = new XMLHttpRequest();
+req.open("GET", "https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/video-game-sales-data.json");
+req.send();
+req.onload = function () {
+  const json = JSON.parse(req.responseText);
+  createTable(json);
+};
+
+function createTable(dataset) {
+  const h = 1000;
+  const w = 1800;
+  const margin = { top: 40, right: 30, bottom: 40, left: 30 };
+  const innerHeight = h - margin.top - margin.bottom;
+  const innerWidth = w - margin.right - margin.left;
+
+  const consoleName = [];
+  for (let i = 0; i < dataset.children.length; i++) {
+    consoleName.push(dataset.children[i].name);
+  }
+
+  const color = ["#f2da57", "#f6b656", "#e25a42", "#dcbdcf", "#b396ad", "#b0cbdb", "#33b6d0", "#7abfcc", "#c8d7a1", "#a0b700", "#6bbba1", "#95a17e", "#c1baa9", "#edcebc", "#c37a73", "#d9a78d", "#d15a86", "#e25a42"];
+
+  const colorObj = {};
+
+  for (let i = 0; i < consoleName.length; i++) {
+    colorObj[consoleName[i]] = color[i];
+  }
+
+
+  const svg = d3.select("#table").
+  append("svg").
+  attr("height", h).
+  attr("width", w);
+
+  var treemap = d3.treemap().
+  size([w, h]).
+  padding(1);
+
+
+  const root = d3.hierarchy(dataset).
+  sum(d => d.value);
+
+  treemap(root);
+
+  const cell = svg.selectAll("g").
+  data(root.leaves()).
+  enter().
+  append("g").
+  attr("transform", d => `translate(${d.x0}, ${d.y0})`);
+
+  const tile = cell.append("rect").
+  attr("width", d => d.x1 - d.x0).
+  attr("height", d => d.y1 - d.y0).
+  attr('class', 'tile').
+  attr('data-name', (d, i) => `${d.data.name}`).
+  attr('data-category', (d, i) => `${d.data.category}`).
+  attr('data-value', (d, i) => `${d.data.value}`).
+  style('fill', (d, i) => colorObj[d.data.category]).
+  append('title').
+  attr('id', 'tooltip').
+  attr('data-value', (d, i) => `${d.data.value}`).
+  text((d, i) => `Name: ${d.data.name}
+                                    Category: ${d.data.category}
+                                    Value: ${d.data.value}`);
+
+  cell.append('text').
+  selectAll('tspan').
+  data((d, i) => d.data.name.split(/(?=[A-Z][^A-Z])/g)).
+  enter().
+  append('tspan').
+  text(d => d).
+  style('font-size', '10').
+  attr('y', (d, i) => 15 + 10 * i).
+  attr('x', 5);
+
+
+  const legendsvg = d3.select("#table").
+  append("svg").
+  attr("y", h).
+  attr("id", "legend").
+  attr("height", 500).
+  attr("width", 1000);
+
+  legendsvg.selectAll('rect').
+  data(consoleName).
+  enter().
+  append('rect').
+  attr('class', 'legend-item').
+  attr('x', (d, i) => i < 9 ? 510 : 600).
+  attr('y', (d, i) => i < 9 ? (i + 1) * 25 : (i - 8) * 25).
+  attr('height', 10).
+  attr('width', 10).
+  style('fill', (d, i) => colorObj[d]);
+
+  legendsvg.selectAll('text').
+  data(consoleName).
+  enter().
+  append('text').
+  attr('x', (d, i) => i < 9 ? 530 : 620).
+  attr('y', (d, i) => i < 9 ? 35 + i * 25 : 35 + (i - 9) * 25).
+  style('font-size', 15).
+  text((d, i) => `${d}`);
+}
