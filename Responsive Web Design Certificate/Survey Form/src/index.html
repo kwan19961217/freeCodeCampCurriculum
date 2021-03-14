@@ -1,0 +1,43 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<body>
+  <header>
+    <h1 id="title">Pet Survey Form</h1>
+    <p id="description">Thank you for sharing your views on keeping a pet!</p>
+  </header>
+  <main>
+    <div id="divform">
+      <form id="survey-form">
+        <br>
+        <label for="name" id="name-label">Name</label><br>
+        <input type="text" class="form-group" id="name" placeholder="Please enter your name" REQUIRED><br>
+        <label for="email" id="email-label">Email</label><br>
+        <input type="email" class="form-group" id="email" placeholder="Please enter your email" REQUIRED><br>
+        <label for="number" id="number-label">Age</label><br>
+        <input type="number" class="form-group" id="number" placeholder="Age"  min="0" max="99"><br>
+        <label for="dropdown">Do you have a pet?</label><br>
+        <select id="dropdown" class="form-group">
+          <option value="Y">Yes</option>
+          <option value="N">No</option>
+        </select><br>
+        <p>Do you want to get a pet?</p>
+        <label for="ofcourse">
+          <input id="ofcourse" type="radio" name="willingness" value="Yes"> Of course!
+        </label>
+        <label for="maybe">
+          <input id="maybe" type="radio" name="willingness" value="Maybe"> Maybe.
+        </label>
+        <label for="nothanks">
+          <input id="nothanks" type="radio" name="willingness" value="No"> No thanks!
+        </label><br>
+        <p>Which animals do you favor?</p>
+        <label for="dog"><input id="dog" type="checkbox" name="species" value="Dog"> Dog</label>
+        <label for="cat"><input id="cat" type="checkbox" name="species" value="Cat"> Cat</label>
+        <label for="rabbit"><input id="rabbit" type="checkbox" name="species" value="Rabbit"> Rabbit</label>
+        <p>Express your love for animals here!</p>
+      <textarea name="comment" class="form-group">Enter your comment here...</textarea><br>
+        <input type="submit" id="submit">
+      </form>
+    </div>
+  </main>
+</>

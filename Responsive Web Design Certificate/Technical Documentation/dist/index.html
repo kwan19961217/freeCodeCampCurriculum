@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - freecodecamp: Responsive Web Design Projects - Build a Technical Documentation Page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<body>
+  <div class="nav">
+     <nav id="nav-bar">
+       <header id="topic">
+         <h2>Quadratic Equation</h2>
+       </header>
+       <ul class="nav-bar-list">
+         <li class="nav-bar-li"><a class="nav-link" href="#introduction">Introduction</a></li>
+         <li class="nav-bar-li"><a class="nav-link" href="#basic">What You Should Already Know</a></li>                    
+         <li class="nav-bar-li"><a class="nav-link" href="#howtosolve">How to Solve</a></li>
+         <li class="nav-bar-li"><a class="nav-link" href="#example">Examples and applications</a></li>
+         <li class="nav-bar-li"><a class="nav-link" href="#references">References</a></li>
+       </ul>
+     </nav>
+  </div>
+  <div class="main">
+    <main id="main-doc">
+      <section class="main-section" id="introduction">
+        <header><h2>Introduction</h2></header>
+        <p>In algebra, a quadratic equation (from the Latin quadratus for "square") is any equation that can be rearranged in standard form as:
+        <code>ax<sup>2</sup> + bx + c = 0</code>where x represents an unknown, and a, b, and c represent known numbers, where a ≠ 0. The numbers a, b, and c are the coefficients of the equation and may be distinguished by calling them, respectively, the quadratic coefficient, the linear coefficient and the constant or free term.
+        </p>
+        <p>The values of x that satisfy the equation are called solutions of the equation, and roots or zeros of the expression on its left-hand side. A quadratic equation has at most two solutions. If there is no real solution, there are two complex solutions. If there is only one solution, one says that it is a double root. A quadratic equation always has two roots, if complex roots are included and a double root is counted for two. A quadratic equation can be factored into an equivalent equation: <code>ax<sup>2</sup> + bx + c = a(x - r)(x - s) = 0</code>where r and s are the solutions for x. Completing the square on a quadratic equation in standard form results in the quadratic formula, which expresses the solutions in terms of a, b, and c. Solutions to problems that can be expressed in terms of quadratic equations were known as early as 2000 BC.
+        </p>
+        <p>Because the quadratic equation involves only one unknown, it is called "univariate". The quadratic equation only contains powers of x that are non-negative integers, and therefore it is a polynomial equation. In particular, it is a second-degree polynomial equation, since the greatest power is two.
+        </p>
+      </section>
+      <section class="main-section" id="basic">
+        <header><h2>What You Should Already Know</h2></header>
+        <p>The concept of expansion and factorisation of quadratic expressions must be fully understood in order to calculate the root(s) of a quadratic equation. The following equations are three common rules for quadratic expressions:</p>
+        <ul class="mathul">
+          <li>(a + b)<sup>2</sup> = a<sup>2</sup>+ 2ab + b<sup>2</sup></li>
+          <li>(a - b)<sup>2</sup> = a<sup>2</sup>- 2ab + b<sup>2</sup></li>
+          <li>(a + b)(a - b) = a<sup>2</sup>- b<sup>2</sup></li>
+      </section>
+      <section class="main-section" id="howtosolve">
+        <header><h2>How to Solve</h2></header>
+        <p>A quadratic equation with real or complex coefficients has two solutions, called roots. These two solutions may or may not be distinct, and they may or may not be real. Here are three ways of solving the equation:</p>
+        <ol>
+          <li><h4>Factoring by inspection</h4></li>
+          <p class="li-p">It may be possible to express a quadratic equation ax<sup>2</sup> + bx + c = 0 as a product (px + q)(rx + s) = 0. In some cases, it is possible, by simple inspection, to determine values of p, q, r, and s that make the two forms equivalent to one another. If the quadratic equation is written in the second form, then the "Zero Factor Property" states that the quadratic equation is satisfied if px + q = 0 or rx + s = 0. Solving these two linear equations provides the roots of the quadratic.</p>
+          <li><h4>Completing the square</h4></li>
+          <p class="li-p">The process of completing the square makes use of the algebraic identity<code>x<sup>2</sup> + 2hx + h<sup>2</sup> = (x + h)<sup>2</sup></code>which represents a well-defined algorithm that can be used to solve any quadratic equation.[2]:207 Starting with a quadratic equation in standard form, ax<sup>2</sup> + bx + c = 0. We illustrate use of this algorithm by solving 2x<sup>2</sup> + 4x − 4 = 0.</p>
+            <ol class="in-ol">
+              <li>x<sup>2</sup> + 2x - 2 = 0</li>
+              <li>x<sup>2</sup> + 2x = 2</li>
+              <li>x<sup>2</sup> + 2x + 1 = 2 + 1</li>
+              <li>(x + 1)<sup>2</sup> = 3</li>
+              <li>x + 1 = &plusmn; &radic;3</li>
+              <li>x = -1 &plusmn; &radic;3</li>
+            </ol>
+          <p>The plus-minus symbol "±" indicates that both x = −1 + √3 and x = −1 − √3 are solutions of the quadratic equation.
+          </p>
+          <li><h4>Quadratic formula and its derivation</h4></li>
+          <p>Completing the square can be used to derive a general formula for solving quadratic equations, called the quadratic formula. The mathematical proof will now be briefly summarized. It can easily be seen, by polynomial expansion, that the following equation is equivalent to the quadratic equation:</p>
+          <code>(x + b&frasl;2a)<sup>2</sup> = (b<sup>2</sup>-4ac) &frasl;(4a<sup>2</sup>)</code>
+          <p>Taking the square root of both sides, and isolating x, gives:</p>
+          <code>x = [-b &plusmn; &radic; (b<sup>2</sup> - 4ac) ]&frasl;2a</code>
+        </ol>
+       </section>
+       <section class="main-section" id="example">
+        <header><h2>Examples and applications</h2></header>
+         <p>The golden ratio is found as the positive solution of the quadratic equation x<sup>2</sup> - x - 1 = 0.</p>
+         <p>The equations of the circle and the other conic sections—ellipses, parabolas, and hyperbolas—are quadratic equations in two variables.</p>
+         <p>Given the cosine or sine of an angle, finding the cosine or sine of the angle that is half as large involves solving a quadratic equation.</p>
+         <p>The process of simplifying expressions involving the square root of an expression involving the square root of another expression involves finding the two solutions of a quadratic equation.</p>
+         <p>Descartes' theorem states that for every four kissing (mutually tangent) circles, their radii satisfy a particular quadratic equation.</p>
+       </section>
+       <section class="main-section" id="references">
+        <header><h2>References</h2></header>
+        <p>All the content are extracted from <a href="https://en.wikipedia.org/wiki/Quadratic_equation">wikipedia</a>.</p>
+       </section>
+    </main>
+  </div>
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
